@@ -14,7 +14,7 @@ import (
 	"strings"
 
 	"github.com/Laur1nMartins/revel"
-	"github.com/revel/revel/testing"
+	"github.com/Laur1nMartins/revel/testing"
 )
 
 // TestRunner is a controller which is used for running application tests in browser.

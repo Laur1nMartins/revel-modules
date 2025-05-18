@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/revel/revel/session"
+	"github.com/Laur1nMartins/revel/session"
 )
 
 func TestExemptPath(t *testing.T) {

@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/Laur1nMartins/revel"
-	"github.com/revel/revel/utils"
+	"github.com/Laur1nMartins/revel/utils"
 	"golang.org/x/net/websocket"
 )
 

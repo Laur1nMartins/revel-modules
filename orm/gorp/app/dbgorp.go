@@ -4,9 +4,9 @@ import (
 	"database/sql"
 
 	"github.com/Laur1nMartins/revel"
+	"github.com/Laur1nMartins/revel/logger"
 	sq "github.com/Masterminds/squirrel"
 	"github.com/go-gorp/gorp"
-	"github.com/revel/revel/logger"
 )
 
 // DB Gorp.
