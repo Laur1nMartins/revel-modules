@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
 )
 
 var importPath *string = flag.String("revel.importPath", "", "Go Import Path for the app.")

@@ -21,8 +21,8 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 
 	// mysql package.
+	"github.com/Laur1nMartins/revel"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"github.com/revel/revel"
 )
 
 // DB Gorm.

@@ -1,5 +1,4 @@
-modules/casbin
-======
+# modules/casbin
 
 Casbin authz is an authorization middleware for [Revel](https://github.com/revel/revel), it's based on [https://github.com/casbin/casbin](https://github.com/casbin/casbin).
 
@@ -13,7 +12,7 @@ import (
 	"net/http/httptest"
 
 	"github.com/casbin/casbin"
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
 	"github.com/revel/modules/auth/casbin"
 )
 
@@ -36,18 +35,17 @@ func main() {
     	context.Request.SetRequest(r)
     	context.Response.SetResponse(w)
     	c := revel.NewController(context)
-    
+
     	testFilters[0](c, testFilters)
 }
 ```
 
 ## Documentation
 
-The authorization determines a request based on ``{subject, object, action}``, which means what ``subject`` can perform what ``action`` on what ``object``. In this plugin, the meanings are:
+The authorization determines a request based on `{subject, object, action}`, which means what `subject` can perform what `action` on what `object`. In this plugin, the meanings are:
 
-1. ``subject``: the logged-on user name
-2. ``object``: the URL path for the web resource like "dataset1/item1"
-3. ``action``: HTTP method like GET, POST, PUT, DELETE, or the high-level actions you defined like "read-file", "write-blog"
-
+1. `subject`: the logged-on user name
+2. `object`: the URL path for the web resource like "dataset1/item1"
+3. `action`: HTTP method like GET, POST, PUT, DELETE, or the high-level actions you defined like "read-file", "write-blog"
 
 For how to write authorization policy and other details, please refer to [the Casbin's documentation](https://github.com/casbin/casbin).

@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 
+	"github.com/Laur1nMartins/revel"
+	gormdb "github.com/Laur1nMartins/revel-modules/orm/gorm/app"
 	"github.com/jinzhu/gorm"
-	gormdb "github.com/revel/modules/orm/gorm/app"
-	"github.com/revel/revel"
 )
 
 // Controller is a Revel controller with a pointer to the opened database.

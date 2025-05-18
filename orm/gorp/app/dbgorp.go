@@ -3,9 +3,9 @@ package gorp
 import (
 	"database/sql"
 
+	"github.com/Laur1nMartins/revel"
 	sq "github.com/Masterminds/squirrel"
 	"github.com/go-gorp/gorp"
-	"github.com/revel/revel"
 	"github.com/revel/revel/logger"
 )
 

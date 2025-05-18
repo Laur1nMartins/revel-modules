@@ -4,8 +4,8 @@ import (
 	"io"
 	"strings"
 
+	"github.com/Laur1nMartins/revel"
 	p2 "github.com/flosch/pongo2"
-	"github.com/revel/revel"
 	"github.com/tylerb/gls"
 )
 

@@ -13,8 +13,8 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/revel/modules/static/app/model"
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
+	"github.com/Laur1nMartins/revel-modules/static/app/model"
 )
 
 // Static file serving controller.
@@ -46,31 +46,36 @@ var byteSizeList = [][]interface{}{
 // application directory. The filepath may either be just a file or an
 // additional filepath to search for the given file. This response may return
 // the following responses in the event of an error or invalid request;
-//   403(Forbidden): If the prefix filepath combination results in a directory.
-//   404(Not found): If the prefix and filepath combination results in a non-existent file.
-//   500(Internal Server Error): There are a few edge cases that would likely indicate some configuration error outside of revel.
+//
+//	403(Forbidden): If the prefix filepath combination results in a directory.
+//	404(Not found): If the prefix and filepath combination results in a non-existent file.
+//	500(Internal Server Error): There are a few edge cases that would likely indicate some configuration error outside of revel.
 //
 // Note that when defining routes in routes/conf the parameters must not have
 // spaces around the comma.
-//   Bad:  Static.Serve("public/img", "favicon.png")
-//   Good: Static.Serve("public/img","favicon.png")
+//
+//	Bad:  Static.Serve("public/img", "favicon.png")
+//	Good: Static.Serve("public/img","favicon.png")
 //
 // Examples:
 // Serving a directory
-//   Route (conf/routes):
-//     GET /public/{<.*>filepath} Static.Serve("public")
-//   Request:
-//     public/js/sessvars.js
-//   Calls
-//     Static.Serve("public","js/sessvars.js")
+//
+//	Route (conf/routes):
+//	  GET /public/{<.*>filepath} Static.Serve("public")
+//	Request:
+//	  public/js/sessvars.js
+//	Calls
+//	  Static.Serve("public","js/sessvars.js")
 //
 // Serving a file
-//   Route (conf/routes):
-//     GET /favicon.ico Static.Serve("public/img","favicon.png")
-//   Request:
-//     favicon.ico
-//   Calls:
-//     Static.Serve("public/img", "favicon.png")
+//
+//	Route (conf/routes):
+//	  GET /favicon.ico Static.Serve("public/img","favicon.png")
+//	Request:
+//	  favicon.ico
+//	Calls:
+//	  Static.Serve("public/img", "favicon.png")
+//
 //nolint:staticcheck
 func (c Static) Serve(prefix, filepath string) revel.Result {
 	// Fix for #503.
@@ -83,6 +88,7 @@ func (c Static) Serve(prefix, filepath string) revel.Result {
 }
 
 // This function serves out the directory as a browseable folder.
+//
 //nolint:staticcheck
 func (c Static) ServeDir(prefix, filepath string) revel.Result {
 	// Fix for #503.
@@ -97,6 +103,7 @@ func (c Static) ServeDir(prefix, filepath string) revel.Result {
 // ServeModule method allows modules to serve binary files. The parameters are the same
 // as Static.Serve with the additional module name pre-pended to the list of
 // arguments.
+//
 //nolint:staticcheck
 func (c Static) ServeModule(moduleName, prefix, filepath string) revel.Result {
 	// Fix for #503.
@@ -124,6 +131,7 @@ func (c Static) ServeModule(moduleName, prefix, filepath string) revel.Result {
 // ServeModule method allows modules to serve binary files. The parameters are the same
 // as Static.Serve with the additional module name pre-pended to the list of
 // arguments.
+//
 //nolint:staticcheck
 func (c Static) ServeModuleDir(moduleName, prefix, filepath string) revel.Result {
 	// Fix for #503.

@@ -1,8 +1,8 @@
 package pongo2
 
 import (
+	"github.com/Laur1nMartins/revel"
 	p2 "github.com/flosch/pongo2"
-	"github.com/revel/revel"
 )
 
 func init() {

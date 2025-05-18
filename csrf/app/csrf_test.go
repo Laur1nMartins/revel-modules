@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
 	"github.com/revel/revel/logger"
 	"github.com/revel/revel/session"
 )

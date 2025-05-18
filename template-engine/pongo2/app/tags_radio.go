@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"html"
 
+	"github.com/Laur1nMartins/revel"
 	p2 "github.com/flosch/pongo2"
-	"github.com/revel/revel"
 )
 
 type tagRadioNode struct {

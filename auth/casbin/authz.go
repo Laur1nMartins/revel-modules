@@ -3,8 +3,8 @@ package casbinauthz
 import (
 	"net/http"
 
+	"github.com/Laur1nMartins/revel"
 	"github.com/casbin/casbin"
-	"github.com/revel/revel"
 )
 
 type CasbinModule struct {
@@ -20,8 +20,8 @@ func NewCasbinModule(enforcer *casbin.Enforcer) *CasbinModule {
 // AuthzFilter enables the authorization based on Casbin.
 //
 // Usage:
-//  1) Add `casbin.AuthzFilter` to the app's filters (it must come after the authentication).
-//  2) Init the Casbin enforcer.
+//  1. Add `casbin.AuthzFilter` to the app's filters (it must come after the authentication).
+//  2. Init the Casbin enforcer.
 func (cm *CasbinModule) AuthzFilter(c *revel.Controller, fc []revel.Filter) {
 	if !CheckPermission(cm.enforcer, c.Request) {
 		c.Result = c.Forbidden("Access denied by the Authz plugin.")

@@ -19,15 +19,16 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Laur1nMartins/revel"
 	"github.com/revel/cron"
-	"github.com/revel/revel"
 )
 
 // Callers can use jobs.Func to wrap a raw func.
 // (Copying the type to this package makes it more visible)
 //
 // For example:
-//    jobs.Schedule("cron.frequent", jobs.Func(myFunc))
+//
+//	jobs.Schedule("cron.frequent", jobs.Func(myFunc))
 type Func func()
 
 func (r Func) Run() { r() }

@@ -13,7 +13,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
 	"github.com/revel/revel/testing"
 )
 

@@ -1,6 +1,6 @@
 package controllers
 
-import "github.com/revel/revel"
+import "github.com/Laur1nMartins/revel"
 
 type AceController struct {
 	*revel.Controller

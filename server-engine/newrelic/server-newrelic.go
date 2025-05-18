@@ -1,8 +1,8 @@
 package revelnewrelic
 
 import (
+	"github.com/Laur1nMartins/revel"
 	newrelic "github.com/newrelic/go-agent"
-	"github.com/revel/revel"
 )
 
 type ServerNewRelic struct {

@@ -1,18 +1,18 @@
-modules/gorm
-===============
+# modules/gorm
 
 [Gorm](http://jinzhu.me/gorm) module
 
 ## Activation
+
 ```ini
 module.gorm = github.com/revel/modules/orm/gorm
 ```
 
 ## Drivers
 
-* sqlite3
-* postgres
-* mysql
+- sqlite3
+- postgres
+- mysql
 
 ## Configuration file
 
@@ -29,21 +29,22 @@ db.host=/tmp/app.db  # Use db.host /tmp/app.db is your driver is sqlite
 ```
 
 #### Database Configuration Parameters Extended Information
-* _autoinit_: The `Db` is initialized from the app.conf if `db.autoinit=true`.
-* _singulartable_: By default all tables created based on a struct are pluralized.
-                   For Example: a `type User struct {}` becomes table `users` in the database
-                   , by setting `singulartable` to `true`, User's default table name will be `user`.
-                   __Note__ table names set with `TableName` won't be affected by this setting.
-                   You can also change the created table names by setting gorm.DefaultTableNameHandler on AppStartup
-                   or func init() see [here](http://jinzhu.me/gorm/models.html#conventions)  for more details
 
+- _autoinit_: The `Db` is initialized from the app.conf if `db.autoinit=true`.
+- _singulartable_: By default all tables created based on a struct are pluralized.
+  For Example: a `type User struct {}` becomes table `users` in the database
+  , by setting `singulartable` to `true`, User's default table name will be `user`.
+  **Note** table names set with `TableName` won't be affected by this setting.
+  You can also change the created table names by setting gorm.DefaultTableNameHandler on AppStartup
+  or func init() see [here](http://jinzhu.me/gorm/models.html#conventions) for more details
 
 ## Example usage with transactions
+
 ```go
 package controllers
 
 import (
-    "github.com/revel/revel"
+    "github.com/Laur1nMartins/revel"
     gormc "github.com/revel/modules/orm/gorm/app/controllers"
 )
 
@@ -65,11 +66,12 @@ func (c App) Index() revel.Result {
 ```
 
 ## Example usage without transactions
+
 ```go
 package controllers
 
 import (
-    "github.com/revel/revel"
+    "github.com/Laur1nMartins/revel"
     gormc "github.com/revel/modules/orm/gorm/app/controllers"
 )
 

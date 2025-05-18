@@ -18,7 +18,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
 	"github.com/revel/revel/session"
 	"golang.org/x/net/websocket"
 )
@@ -55,6 +55,7 @@ type TestSuite struct {
 
 // NewTestRequest returns an initialized *TestRequest. It is used for extending
 // testsuite package making it possible to define own methods. Example:
+//
 //	type MyTestSuite struct {
 //		testing.TestSuite
 //	}

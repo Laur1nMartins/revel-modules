@@ -1,8 +1,8 @@
 package jobs
 
 import (
+	"github.com/Laur1nMartins/revel"
 	"github.com/revel/cron"
-	"github.com/revel/revel"
 )
 
 const DefaultJobPoolSize = 10

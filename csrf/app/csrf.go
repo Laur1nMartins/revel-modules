@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
 )
 
 // allowMethods are HTTP methods that do NOT require a token.
@@ -42,8 +42,9 @@ func RefreshToken(c *revel.Controller) string {
 // CsrfFilter enables CSRF request token creation and verification.
 //
 // Usage:
-//  1) Add `csrf.CsrfFilter` to the app's filters (it must come after the revel.SessionFilter).
-//  2) Add CSRF fields to a form with the template tag `{{ csrftoken . }}`.
+//  1. Add `csrf.CsrfFilter` to the app's filters (it must come after the revel.SessionFilter).
+//  2. Add CSRF fields to a form with the template tag `{{ csrftoken . }}`.
+//
 // The filter adds a function closure to the `ViewArgs` that can pull out the secret and make the token as-needed,
 // caching the value in the request. Ajax support provided through the `X-CSRFToken` header.
 func CsrfFilter(c *revel.Controller, fc []revel.Filter) {

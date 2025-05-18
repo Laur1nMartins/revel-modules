@@ -5,10 +5,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/Laur1nMartins/revel"
+	gormdb "github.com/Laur1nMartins/revel-modules/orm/gorm/app"
 	"github.com/casbin/casbin"
 	_ "github.com/go-sql-driver/mysql"
-	gormdb "github.com/revel/modules/orm/gorm/app"
-	"github.com/revel/revel"
 )
 
 var (

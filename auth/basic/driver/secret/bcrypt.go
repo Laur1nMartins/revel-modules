@@ -3,7 +3,7 @@ package secret
 import (
 	"errors"
 
-	auth "github.com/revel/modules/auth/basic"
+	auth "github.com/Laur1nMartins/revel-modules/auth/basic"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -11,16 +11,15 @@ import (
 // This driver should be embedded into your app-level User model
 // It expects your User model to have `Password` and `HashedPassword` string fields
 //
-// Your User model also needs to set itself as the UserContext for the BcryptAuth driver
+// # Your User model also needs to set itself as the UserContext for the BcryptAuth driver
 //
-// func NewUser(email, pass string) *User {
-// 	u := &User{
-// 		email:    email,
-// 		password: pass,
-// 	}
-// 	u.UserContext = u
-// }
-//
+//	func NewUser(email, pass string) *User {
+//		u := &User{
+//			email:    email,
+//			password: pass,
+//		}
+//		u.UserContext = u
+//	}
 type BcryptAuth struct {
 	UserContext auth.UserAuth
 }

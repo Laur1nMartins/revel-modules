@@ -16,7 +16,7 @@ package db
 import (
 	"database/sql"
 
-	"github.com/revel/revel"
+	"github.com/Laur1nMartins/revel"
 )
 
 // Database connection variables.

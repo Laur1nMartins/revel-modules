@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/Laur1nMartins/revel"
+	"github.com/Laur1nMartins/revel-modules/jobs/app/jobs"
 	"github.com/revel/cron"
-	"github.com/revel/modules/jobs/app/jobs"
-	"github.com/revel/revel"
 )
 
 type Jobs struct {
